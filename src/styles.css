@@ -1,4 +1,50 @@
-.App {
-  font-family: sans-serif;
-  text-align: center;
+body,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+}
+* {
+  box-sizing: border-box;
+  font-family: Verdana;
+}
+
+.pageBox {
+  height: 100vh;
+  background-color: #101042;
+}
+.cname {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: whitesmoke;
+}
+
+.triangleLeft {
+  /* overflow: hidden; */
+  /* width: 100vw; */
+  /* height: 100vh; */
+  /* border: 10px solid; */
+  /* left: 0%; */
+  /* clip: rect(auto, 180px, auto, 100px); */
+}
+
+/* .triangleLeft::after {
+  content: "";
+  position: absolute;
+  top: 10px;
+  bottom: 10px;
+  left: 10px;
+  right: 10px;
+  opacity: 45%;
+  background: -webkit-linear-gradient(
+    left top,
+    rgba(121, 33, 255, 1) 30%,
+    rgba(101, 0, 255, 1) 100%
+  );
+  transform: rotate(-45deg);
+} */
+.triangleLeft * {
+  transform: translate(500px);
 }
