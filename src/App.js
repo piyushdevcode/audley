@@ -21,25 +21,10 @@ export default function App() {
         <div className="cname">Yash Consultants</div>
         <div className="cname tline">Yash Consultants</div>
         <div className="btn-grp">
-          <button class="btn">Employee</button>
-          <button class="btn">Employer</button>
+          <button className="btn">Employee</button>
+          <button className="btn">Employer</button>
         </div>
       </div>
     </div>
   );
 }
-
-{
-  /* aa
-  > Job Search 
-  > Feedback
-  > Newsletter
-  > Our recruiters
-  > Info Component(about)
-  > Our Services (component)
-  > Login
-  > 404 error 
-*/
-}
-//bbcjhkvjlbbb
-//iamyash
