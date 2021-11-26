@@ -1,5 +1,6 @@
 import "./styles.css";
-import { ReactComponent as BgTriangle } from "./bgtr.svg";
+import { ReactComponent as BgTriangle } from "./img/bgtr.svg";
+import landing from "./img/landing.png";
 export default function App() {
   return (
     <div className="App">
@@ -13,13 +14,14 @@ export default function App() {
           <div className="navbar_item">Contact</div>
           <div className="navbar_item">Follow Us</div>
         </header>
-        <div className="triangleLeft"></div>
-        {/* <BgTriangle /> */}
-        <img src="/src/img/landing.png" alt="ola" />
+        {/* <BgTriangle style={{width:"500vw",height:"500vh",transform:"translate(-2600px,-250px)",overflow:"hidden"}}/> */}
+        {/* <img src={landing} alt="ola" /> */}
+        <h1 className="cname">Yash Consultants</h1>
+        <h2 className="cname tline">Yash Consultants</h2>
+        <div className="btn-grp">
+          <button class="btn">Employee</button>
+        </div>
       </div>
-
-      <h1 className="cname">Yash Consultants</h1>
-      <h2 className="cname tline">Yash Consultants</h2>
     </div>
   );
 }
