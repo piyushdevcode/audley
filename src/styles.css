@@ -14,16 +14,20 @@ body,
   width: 100vw;
   height: 100vh;
   background-color: #101042;
+  font-size: 3vh;
 }
 .cname {
   font-family: poppins;
   position: absolute;
+  font-weight: 700;
+  font-size: 2.25em;
   top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
   color: whitesmoke;
 }
 .tline {
+  font-size: 1.5em;
   top: 47%;
   opacity: 0.5;
 }
@@ -33,9 +37,6 @@ body,
   align-items: center;
   padding: 0 20px;
   box-shadow: 10 10 10 10;
-  color: white;
-  font-family: Helvetica;
-  font-weight: 500;
 }
 
 .navbar_title {
@@ -52,16 +53,22 @@ body,
 .navbar_item:hover {
   color: #17ee9d;
 }
-
+.test {
+  box-shadow: inset 0px 0px 0px 5px white;
+}
 .btn-grp {
-  border: 10px solid;
+  position: relative;
+  column-gap: 10%;
+  top: 45%;
+  display: flex;
+  justify-content: center;
 }
 .btn {
   cursor: pointer;
   border: 0;
   font-size: 1rem;
-  padding: 10px 20px;
-  border-radius: 0.5em;
+  padding: 0.75em 1.5em;
+  border-radius: 0.45em;
   font-weight: 700;
   transition: 0.2s ease-in-out;
   background: linear-gradient(90deg, #721cd5, #dd00f3);
