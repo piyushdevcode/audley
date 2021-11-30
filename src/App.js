@@ -4,7 +4,6 @@ import { ReactComponent as BgColored } from "./img/BGcol.svg";
 import { ReactComponent as Recicon } from "./img/recruitIcon.svg";
 import { ReactComponent as Writingicon } from "./img/writingIcon.svg";
 import { ReactComponent as Bulbicon } from "./img/bulbIcon.svg";
-import Circle from "./img/Ellipse 6.png";
 import Navbar from "./navbar";
 import Services from "./services";
 import Feedback from "./Feedback";
@@ -12,7 +11,6 @@ import Feedback from "./Feedback";
 export default function App() {
   return (
     <div className="App">
-      {/* <img id ="jinga" src={Circle}/> */}
       <BgEle className="bg" />
       {/* <BgColored classname="bg"/> */}
       <div className="pageBox">
