@@ -1,30 +1,86 @@
 import "./styles.css";
-import { ReactComponent as BgTriangle } from "./img/bgtr.svg";
-import landing from "./img/landing.png";
+import { ReactComponent as BgEle } from "./img/BG.svg";
+import { ReactComponent as BgColored } from "./img/BGcol.svg";
+import { ReactComponent as Recicon } from "./img/recruitIcon.svg";
+import { ReactComponent as Writingicon } from "./img/writingIcon.svg";
+import { ReactComponent as Bulbicon } from "./img/bulbIcon.svg";
+import Circle from "./img/Ellipse 6.png";
+import Navbar from "./navbar";
+import Services from "./services";
+import Feedback from "./Feedback";
 
 export default function App() {
   return (
     <div className="App">
+      {/* <img id ="jinga" src={Circle}/> */}
+      <BgEle className="bg" />
+      {/* <BgColored classname="bg"/> */}
       <div className="pageBox">
-        <header className="navbar">
-          <div className="navbar_title navbar_item">LOGO</div>
-          <div className="navbar_item">Home</div>
-          <div className="navbar_item">About</div>
-          <div className="navbar_item">Services</div>
-          <div className="navbar_item">Blog</div>
-          <div className="navbar_item">Contact</div>
-          <div className="navbar_item">Follow Us</div>
-        </header>
+        <Navbar />
         {/* <BgTriangle style={{width:"500vw",height:"500vh",transform:"translate(-2600px,-250px)",overflow:"hidden"}}/> */}
-        {/* <BgTriangle/> */}
         {/* <img src={landing} alt="ola" /> */}
-        <div className="cname">Yash Consultants</div>
-        <div className="cname tline">Yash Consultants</div>
-        <div className="btn-grp">
+        <div className="cname">Audley Consultants</div>
+        <div className="cname tline">Audley Consultants</div>
+        <div className="btn-grp center">
           <button className="btn">Employee</button>
           <button className="btn">Employer</button>
         </div>
       </div>
+      <div className="pageBox p2">
+        <div className="content-block">
+          <p class="heading" align="center">
+            ABOUT US
+          </p>
+          <div className="info-block">
+            Audley Consultants (OPC) PVT LTD has been immensely successful in
+            creating a global network of a highly adept intelligent workforce
+            that can help a company achieve its mission-critical projects and
+            goals . Keeping pace with projects and being on the lookout for
+            extremely talented individuals has become ever more challenging.
+            Here is where Your growth is our goal!{" "}
+          </div>
+        </div>
+      </div>
+      <div className="pageBox p3">
+        <div className="content-block">
+          <p class="heading" align="center">
+            OUR SERVICES
+          </p>
+          <div className="info-block">
+            Audley Consultants has been immensely successful in creating a
+            global network by providing different kind of services like
+            <div className="all-services">
+              {/* 1st service */}
+              <div className="services">
+                <Recicon className="service-icon" />
+                <div className="service-title">Recruitment Services</div>
+                <div className="service-subtitle">Permanent/Contractual</div>
+              </div>
+              {/* 2nd service */}
+              <div className="services">
+                <Writingicon className="service-icon" />
+                <div className="service-title">Resume Writing</div>
+                <div className="service-subtitle">Permanent/Contractual</div>
+              </div>
+              {/* 3rd service */}
+              <div className="services">
+                <Bulbicon className="service-icon" />
+                <div className="service-title">Career Counseling</div>
+                <div className="service-subtitle">Permanent/Contractual</div>
+              </div>
+              {/* 4th service */}
+              {/* <div className="services">
+                <Recicon className="service-icon" />
+                <div className="service-title">Recruitment Services</div>
+                <div className="service-subtitle">Permanent/Contractual</div>
+              </div> */}
+              <Services icon="yp" title="Job" subtitle="Less" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="pagebox p4"> Yolo</div>
+      {/* <Feedback/> */}
     </div>
   );
 }

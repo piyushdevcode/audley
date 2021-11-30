@@ -4,16 +4,39 @@ body,
   margin: 0;
   padding: 0;
 }
+.App {
+  background-color: #101042;
+}
+#Mask_Group_3 {
+  mix-blend-mode: overlay;
+  opacity: 0.5;
+}
+#jinga {
+  mix-blend-mode: overlay;
+  opacity: 0.5;
+}
+.bg {
+  margin-top: -50px;
+  width: 99.9%;
+  position: absolute;
+  opacity: 0.8;
+  pointer-events: none;
+}
 * {
   color: white;
   box-sizing: border-box;
   font-family: Chivo;
 }
 
+.center {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 .pageBox {
-  width: 100vw;
+  overflow-x: hidden;
+  /* position: relative; */
   height: 100vh;
-  background-color: #101042;
   font-size: 3vh;
 }
 .cname {
@@ -34,15 +57,20 @@ body,
 
 .navbar {
   display: flex;
-  align-items: center;
-  padding: 0 20px;
-  box-shadow: 10 10 10 10;
+  align-items: baseline;
+  padding: 0 10px;
+  font-size: 0.9em;
+  /* box-shadow: inset 0px -5px 12px 3px #108cf9; */
+}
+.ico {
+  font-size: medium;
+  margin-right: 0.2rem;
 }
 
 .navbar_title {
   margin-right: auto;
   font-size: 150%;
-  padding: 12px 16px;
+  padding: 12px 12px;
 }
 
 .navbar_item {
@@ -50,23 +78,48 @@ body,
   cursor: pointer;
   vertical-align: middle;
 }
-.navbar_item:hover {
+.navbar_item:hover,
+.follow_item:hover {
   color: #17ee9d;
+}
+.followbtn {
+  position: relative;
+}
+.follow_handles {
+  transition: 0.5s ease-in-out;
+  opacity: 0;
+  margin: 0.25em 0 0 -0.7em;
+  font-size: 0.85em;
+  border-radius: 0.5rem;
+  visibility: hidden;
+  box-shadow: 0px 1px 10px 5px rgba(0, 0, 0, 0.5);
+  position: absolute;
+}
+.follow_item {
+  display: inline-flex;
+  gap: 0.25em;
+  align-content: center;
+  padding: 0.75em 0.4em;
+}
+.followbtn:hover .follow_handles {
+  visibility: visible;
+  opacity: 1;
 }
 .test {
   box-shadow: inset 0px 0px 0px 5px white;
 }
 .btn-grp {
-  position: relative;
-  column-gap: 10%;
-  top: 45%;
+  position: absolute;
+  column-gap: 30%;
+  top: 60%;
+
   display: flex;
   justify-content: center;
 }
 .btn {
   cursor: pointer;
   border: 0;
-  font-size: 1rem;
+  font-size: 1em;
   padding: 0.75em 1.5em;
   border-radius: 0.45em;
   font-weight: 700;
@@ -77,4 +130,228 @@ body,
   background: none;
   fill: black;
   box-shadow: inset 0px 0px 0px 2px white;
+}
+.p2 {
+  transform: translate(0, -25%);
+}
+.p3 {
+  transform: translate(0, -30%);
+  height: fit-content;
+}
+.p4 {
+  height: 100%;
+}
+.services {
+  background: linear-gradient(
+    180deg,
+    rgb(255 255 255 / 8%) 1%,
+    rgb(36 36 36 / 8%) 100%
+  );
+  padding: 0.5rem 1.25rem;
+  line-height: 1rem;
+  margin: 2rem;
+  margin-left: 0;
+  width: 40%;
+  text-align: center;
+  font-size: 1rem;
+  border-radius: 0.5em;
+  box-shadow: 3px -5px 15px 0.5px #08080878;
+}
+.all-services {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 1rem;
+  column-gap: 2.6rem;
+}
+.service-icon {
+  margin: 1.75rem 0 1rem;
+  width: 40%;
+  height: auto;
+}
+.service-title {
+  font-size: 0.9em;
+}
+.service-subtitle {
+  opacity: 0.5;
+  font-size: 0.75em;
+}
+.content-block p.heading {
+  font-family: Poppins;
+  font-weight: 500;
+  font-size: 1.35em;
+}
+.info-block {
+  font-family: Chivo;
+  font-size: 1em;
+  text-align: justify;
+  /* font-size: 4vh; */
+  line-height: 2.3rem;
+  padding: 2em 8em 4em;
+  border-radius: 0.5em;
+  box-shadow: 3px -5px 15px 0.5px #08080878;
+  margin: 4em 10em;
+  border-top-right-radius: 8rem;
+  border-bottom-left-radius: 8rem;
+}
+/*////////////////////////////////////  */
+.FeedbackPage {
+  margin: 0;
+  padding: 0;
+  font-family: montserrat;
+  background: linear-gradient(120deg, #2980b9, #8e44ad);
+  height: 100vh;
+  overflow: hidden;
+}
+
+.FeedbackForm {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  background: white;
+  border-radius: 10px;
+}
+
+.FeedbackForm h1 {
+  text-align: center;
+  padding: 0 0 20px 0;
+  border-bottom: 1px solid silver;
+}
+
+.FeedbackForm form {
+  padding: 0 40px;
+  box-sizing: border-box;
+}
+
+form .txt_field {
+  position: relative;
+  border-bottom: 2px solid #adadad;
+  margin: 30px 0;
+}
+
+.txt_field input {
+  width: 100%;
+  padding: 0 5px;
+  height: 40px;
+  font-size: 16px;
+  border: none;
+  background: none;
+  outline: none;
+}
+
+.txt_field label {
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  color: #adadad;
+  transform: translateY(-50%);
+  font-size: 16px;
+  pointer-events: none;
+  transition: 0.5s;
+}
+
+.txt_field span::before {
+  content: "";
+  position: absolute;
+  top: 40px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background: #2691d9;
+}
+
+.txt_field input:focus ~ label,
+.txt_field input:valid ~ label {
+  top: -5px;
+  color: #2691d9;
+}
+
+.txt_field input:focus ~ span::before,
+.txt_field input:valid ~ span::before {
+  width: 100%;
+}
+
+.txt_field input[type="submit"] {
+  width: 100%;
+  height: 50px;
+  border: 1px solid;
+  background: #2691d9;
+  border-radius: 25px;
+  font-size: 18px;
+  color: #e9f4fb;
+  font-weight: 700;
+  cursor: pointer;
+  outline: none;
+}
+
+.txt_field input[type="submit"]:hover {
+  border-color: #2691d9;
+  transition: 0.5s;
+}
+
+.LoginPage {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background: #34495e;
+}
+
+.LoginForm {
+  width: 300px;
+  padding: 40px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #191919;
+  text-align: center;
+}
+
+.LoginForm h1 {
+  color: white;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.LoginForm input[type="text"],
+.LoginForm input[type="password"] {
+  border: 0;
+  background: none;
+  display: block;
+  margin: 20px auto;
+  text-align: center;
+  border: 2px solid #3498db;
+  padding: 14px 10px;
+  width: 200px;
+  outline: none;
+  color: white;
+  border-radius: 24px;
+  transition: 0.25s;
+}
+
+.LoginForm input[type="text"]:focus,
+.LoginForm input[type="password"]:focus {
+  width: 280px;
+  border-color: #2ecc71;
+}
+
+.LoginForm input[type="submit"] {
+  border: 0;
+  background: none;
+  display: block;
+  margin: 20px auto;
+  text-align: center;
+  border: 2px solid #3498db;
+  padding: 14px 10px;
+  width: 200px;
+  outline: none;
+  color: white;
+  border-radius: 24px;
+  transition: 0.25s;
+  cursor: pointer;
+}
+
+.LoginForm input[type="submit"]:hover {
+  background: #2ecc71;
 }
