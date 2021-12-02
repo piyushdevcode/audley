@@ -1,38 +1,370 @@
-.App {
-  text-align: center;
+body,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
 }
-
-.App-logo {
-  height: 40vmin;
+.App {
+  background-color: #101042;
+}
+#Mask_Group_3 {
+  mix-blend-mode: overlay;
+  opacity: 0.3;
+}
+.navbar a{
+  text-decoration: none;
+  color: whitesmoke;
+}
+.bg {
+  
+  margin-top: -2.7em;
+  position: absolute;
+  opacity: 0.5;
   pointer-events: none;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+* {
+  color: white;
+  box-sizing: border-box;
+  font-family: Chivo;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.center {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.pageBox {
+  overflow-x: hidden;
+  /* position: relative; */
+  height: 100vh;
+  font-size: 3vh;
+}
+.cname {
+  font-family: poppins;
+  position: absolute;
+  font-weight: 700;
+  font-size: 2.25em;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: whitesmoke;
+}
+.tline {
+  font-size: 1.5em;
+  top: 47%;
+  opacity: 0.5;
+}
+
+.navbar {
+  color: whitesmoke;
   display: flex;
-  flex-direction: column;
+  align-items: baseline;
+  padding: 0 10px;
+  font-size: 0.9em;
+  /* box-shadow: inset 0px -5px 12px 3px #108cf9; */
+}
+.ico {
+  font-size: medium;
+  margin-right: 0.2rem;
+}
+
+.navbar_title {
+  margin-right: auto;
+  font-size: 150%;
+  padding: 12px 12px;
+}
+
+.navbar_item {
+  padding: 16px 16px;
+  cursor: pointer;
+  vertical-align: middle;
+}
+.navbar_item:hover,
+.follow_item:hover,.navbar a:hover {
+  color: #17ee9d;
+}
+.followbtn {
+  position: relative;
+}
+.follow_handles {
+  transition: 0.5s ease-in-out;
+  opacity: 0;
+  margin: 0.25em 0 0 -1.25em;
+  font-size: 0.85em;
+  border-radius: 0.5rem;
+  visibility: hidden;
+  box-shadow: 0px 1px 10px 5px rgba(0, 0, 0, 0.5);
+  position: absolute;
+  background-color: #8a2be296;
+  z-index: 9;
+}
+.follow_item {
+  display: inline-flex;
+  gap: 0.25em;
+  align-content: center;
+  padding: 0.75em 0.4em;
+}
+.followbtn:hover .follow_handles {
+  visibility: visible;
+  opacity: 1;
+}
+.test {
+  box-shadow: inset 0px 0px 0px 5px white;
+}
+.btn-grp {
+  position: absolute;
+  column-gap: 30%;
+  top: 60%;
+  
+  display: flex;
+  justify-content: center;
+}
+.btn-grp .btn {
+  color: whitesmoke;
+  cursor: pointer;
+  border: 0;
+  font-size: 1em;
+  padding: 0.75em 1.5em;
+  border-radius: 0.45em;
+  font-weight: 700;
+  transition: 0.2s ease-in-out;
+  background: linear-gradient(90deg, #721cd5, #dd00f3);
+}
+.btn-grp .btn:hover {
+  background: none;
+  color:whitesmoke;
+  fill: #101042;
+  box-shadow: inset 0px 0px 0px 2px white;
+}
+.p2 {
+  transform: translate(0, -25%);
+}
+.p3 {
+  transform: translate(0, -30%);
+  height: fit-content;
+}
+.p4 {
+  height: 100%;
+}
+.services {
+  background: linear-gradient(
+    180deg,
+    rgb(255 255 255 / 8%) 1%,
+    rgb(36 36 36 / 8%) 100%
+  );
+  padding: 0.5rem 1.25rem;
+  line-height: 1rem;
+  margin: 2rem;
+  margin-left: 0;
+  width: 40%;
+  text-align: center;
+  font-size: 1rem;
+  border-radius: 0.5em;
+  box-shadow: 3px -5px 15px 0.5px #08080878;
+}
+.all-services {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 1rem;
+  column-gap: 2.6rem;
+}
+.service-icon {
+  margin: 1.75rem 0 1rem;
+  width: 40%;
+  height: auto;
+}
+.service-title {
+  font-size: 0.9em;
+}
+.service-subtitle {
+  opacity: 0.5;
+  font-size: 0.75em;
+}
+.content-block p.heading {
+  font-family: Poppins;
+  font-weight: 500;
+  font-size: 1.35em;
+}
+.info-block {
+  font-family: Chivo;
+  font-size: 1em;
+  text-align: justify;
+  /* font-size: 4vh; */
+  line-height: 2.3rem;
+  padding: 2em 8em 4em;
+  border-radius: 0.5em;
+  box-shadow: 3px -5px 15px 0.5px #08080878;
+  margin: 4em 10em;
+  border-top-right-radius: 8rem;
+  border-bottom-left-radius: 8rem;
+}
+
+/*-----------Feedback----------*/
+
+.FeedbackPage {
+  margin: 0;
+  padding: 0;
+  font-family: "poppins", sans-serif;
+  box-sizing: border-box;
+}
+
+.FeedbackForm {
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), #3551b5),
+    url("https://unsplash.com/photos/npxXWgQ33ZQ");
+  background-position: center;
+  background-size: cover;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.FormFilling {
+  width: 100%;
+  max-width: 450px;
+}
+
+.txt_field {
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.txt_field input,
+.txt_field textarea {
+  width: 100%;
+  padding: 10px;
+  outline: 0;
+  border: 1px solid #fff;
+  color: #fff;
+  background: transparent;
+  font-size: 15px;
+}
+
+.txt_field label {
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding: 10px;
+  color: #fff;
+  cursor: text;
+  transition: 0.2s;
+}
+
+.txt_field button {
+  padding: 10px;
+  color: #fff;
+  outline: none;
+  background: transparent;
+  border: 1px solid #fff;
+  width: 100%;
+  cursor: pointer;
+}
+
+.txt_field button:hover {
+  cursor: pointer;
+  background: black;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.txt_field input:focus ~ label,
+.txt_field input:valid ~ label,
+textarea:focus ~ label,
+textarea:valid ~ label {
+  top: -35px;
+  font-size: 14px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.Personal {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
+
+.Personal .txt_area {
+  flex-basis: 60%;
+}
+
+/*-----------Login----------*/
+
+.LoginPage {
+  margin: 0;
+  padding: 0;
+  background: url("https://picsum.photos/id/10/2500/1667");
+  background-size: cover;
+  background-position: center;
+  font-family: sans-serif;
+  overflow: hidden;
+}
+
+.LoginForm {
+  width: 320px;
+  height: 500px;
+  background: #000;
+  color: #fff;
+  top: 50%;
+  position: absolute;
+  transform: translate(180%, -50%);
+  box-sizing: border-box;
+  padding: 70px 30px;
+}
+
+.LoginForm h1 {
+  margin: 10px;
+  padding: 0 0 25px;
+  text-align: center;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.LoginForm p {
+  margin: 0;
+  padding: 0;
+  font-weight: bold;
+}
+
+.LoginForm input {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.LoginForm input[type="text"],
+input[type="password"] {
+  border: none;
+  border-bottom: 1px solid #fff;
+  background: transparent;
+  outline: none;
+  height: 40px;
+  color: #fff;
+  font-size: 16px;
+}
+
+.LoginForm input[type="submit"] {
+  border: none;
+  outline: none;
+  height: 40px;
+  background: #fb2525;
+  color: #fff;
+  font-size: 18px;
+  border-radius: 20px;
+}
+
+.LoginForm input[type="submit"]:hover {
+  cursor: pointer;
+  background: #ffc107;
+  color: #000;
+}
+
+.LoginForm a {
+  text-decoration: none;
+  font-size: 12px;
+  line-height: 20px;
+  color: darkgrey;
+}
+
+.LoginForm a:hover {
+  color: #ffc107;
+}
+
+/* ---------- ----------*/

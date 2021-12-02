@@ -1,0 +1,9 @@
+body{
+    background-color: #101042;
+}
+.card{
+    background:linear-gradient(90deg,blueviolet,purple);
+}
+.btn-secondary{
+    background-color: black;
+}
